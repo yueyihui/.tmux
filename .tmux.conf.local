@@ -373,7 +373,7 @@ tmux_conf_update_plugins_on_reload=false
 # visit https://github.com/tmux-plugins for available plugins
 #set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'laktak/extrakto'
-set -g @extrakto_key 'Space'
+set -g @extrakto_key 'f'
 set -g @extrakto_split_direction 'v'
 set -g @extrakto_split_size '15'
 
