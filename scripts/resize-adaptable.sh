@@ -3,12 +3,9 @@ a=$(expr $window_panes \% 2)
 if [ $window_panes -eq 1 ]; then
 	exit 0
 elif [ $window_panes -eq 3 ]; then
-    left=$(tmux display -t 1 -p '#{pane_at_left}')
-    right=$(tmux display -t 1 -p '#{pane_at_right}')
-	if [ $left -eq 1 ] && [ $right -eq 0 ]; then
-		tmux select-layout tiled
-        exit 0
-    fi
+    tmux select-layout -t 2 -E
+    tmux select-layout -t 2 -E
+    exit 0
 elif [ $a -eq 0 ]; then
 	if [ $window_panes -eq 2 ]; then
 		left=$(tmux display -t 1 -p '#{pane_at_left}')
