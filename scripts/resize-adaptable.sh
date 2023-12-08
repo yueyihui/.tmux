@@ -8,9 +8,15 @@ elif [ $window_panes -eq 3 ]; then
     exit 0
 elif [ $a -eq 0 ]; then
 	if [ $window_panes -eq 2 ]; then
-		left=$(tmux display -t 1 -p '#{pane_at_left}')
+
+        curr_pane=$(tmux display -p '#{pane_index}')
+        if [ $(tmux display -t $curr_pane -p '#{window_zoomed_flag}') -eq 1 ] ; then
+            tmux select-layout -t 2 -E
+            exit 0
+        fi
+
 		right=$(tmux display -t 1 -p '#{pane_at_right}')
-		if [ $left -eq 1 ] && [ $right -eq 0 ]; then
+		if [ $right -eq 0 ]; then
 			tmux select-layout even-horizontal
 		else
 			tmux select-layout even-vertical
