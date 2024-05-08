@@ -383,7 +383,7 @@ set -g @plugin 'tmux-plugins/tmux-open'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @plugin 'yueyihui/tmux-pane-navigator'
-set -g @continuum-restore 'on'
+set -g @continuum-restore 'off'
 
 
 # -- custom variables ----------------------------------------------------------
