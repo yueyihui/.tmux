@@ -378,6 +378,8 @@ set -g @extrakto_split_direction 'v'
 set -g @extrakto_split_size '15'
 
 set -g @plugin 'yueyihui/tmux-fingers'
+set -g @fingers-jump-key ''
+
 set -g @plugin 'tmux-plugins/tmux-open'
 #set -g @plugin 'tmux-plugins/tmux-cpu'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
